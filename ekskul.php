@@ -6,35 +6,29 @@
     [
       "nama"    => "Pramuka",
       "icon"    => "⚜️",
-      "foto"    => "img/ekskul/ekskul-01.jpg",
+      "foto"    => "img/ekskul/ekskul-pramuka.jpeg",
       "desc"    => "Kegiatan kepanduan yang membentuk karakter siswa menjadi pribadi yang disiplin, mandiri, dan berjiwa pemimpin. Melalui berbagai kegiatan outdoor dan indoor, siswa belajar nilai-nilai kebangsaan dan kebersamaan.",
-      "hari"    => "Sabtu",
-      "jam"     => "08.00 – 10.00 WIB",
-      "pembina" => "— (Template)",
-      "peserta" => "± 60 Siswa",
+      "hari"    => "Selasa & Kamis",
+      "jam"     => "14.30 – 15.00 WIB",
       "warna"   => "#c0392b",
     ],
     [
-      "nama"    => "Seni Kaligrafi",
-      "icon"    => "✍️",
-      "foto"    => "img/ekskul/ekskul-02.jpg",
+      "nama"    => "Olahraga Futsal",
+      "icon"    => "⚽",
+      "foto"    => "img/ekskul/ekskul-futsal.jpeg",
+      "desc"    => "Program olahraga yang melatih kebugaran fisik dan semangat sportivitas siswa. Selain futsal, kegiatan ini mencakup senam, atletik ringan, dan permainan tim yang menanamkan nilai kerja sama dan fair play.",
+      "hari"    => "Jum'at",
+      "jam"     => "13.30 – 15.30 WIB",
+      "warna"   => "#FF7100",
+    ],
+    [
+      "nama"    => "Bulu Tangkis",
+      "icon"    => "🏸",
+      "foto"    => "img/ekskul/ekskul-badminton.jpeg",
       "desc"    => "Mengembangkan bakat seni siswa melalui keindahan tulisan Arab. Siswa diajarkan berbagai gaya khat mulai dari Naskhi hingga Tsuluts oleh pembina berpengalaman, dengan target mengikuti perlombaan tingkat kecamatan dan kabupaten.",
       "hari"    => "Jum'at",
       "jam"     => "13.00 – 14.30 WIB",
-      "pembina" => "— (Template)",
-      "peserta" => "± 30 Siswa",
       "warna"   => "#2D8F81",
-    ],
-    [
-      "nama"    => "Olahraga & Futsal",
-      "icon"    => "⚽",
-      "foto"    => "img/ekskul/ekskul-03.jpg",
-      "desc"    => "Program olahraga yang melatih kebugaran fisik dan semangat sportivitas siswa. Selain futsal, kegiatan ini mencakup senam, atletik ringan, dan permainan tim yang menanamkan nilai kerja sama dan fair play.",
-      "hari"    => "Rabu",
-      "jam"     => "14.00 – 15.30 WIB",
-      "pembina" => "— (Template)",
-      "peserta" => "± 45 Siswa",
-      "warna"   => "#FF7100",
     ],
   ];
 
@@ -292,10 +286,7 @@
 
     /* Meta Info */
     .ekskul-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 4px;
+  grid-template-columns: 1fr 1fr; /* biarkan, tetap bagus untuk 2 item */
     }
     .ekskul-meta-item {
       display: flex;
@@ -432,17 +423,6 @@
     }
     footer span { color: var(--green-pale); font-weight: 700; }
 
-    /* ---- Template Note ---- */
-    .template-note {
-      background: rgba(255,113,0,.08);
-      border: 1px solid rgba(255,113,0,.25);
-      border-radius: var(--radius-sm);
-      padding: 12px 16px;
-      font-size: 0.82rem;
-      color: #7a3800;
-      margin-bottom: 36px;
-    }
-
     /* ---- Responsive ---- */
     @media (max-width: 960px) {
       .ekskul-card,
@@ -527,10 +507,6 @@
     <h2 class="section-heading">Program Ekstrakurikuler</h2>
     <p class="section-desc">Tiga program ekskul aktif yang membentuk siswa menjadi pribadi unggul, berkarakter, dan berprestasi.</p>
 
-    <div class="template-note">
-      ⚠️ <strong>Template</strong> — Nama pembina dan foto kegiatan masih perlu diisi sesuai data aktual madrasah.
-    </div>
-
     <div class="ekskul-list">
       <?php foreach ($ekskul as $i => $e): ?>
       <div class="ekskul-card">
@@ -574,27 +550,6 @@
                 <span class="ekskul-meta-value"><?= $e['jam'] ?></span>
               </div>
             </div>
-
-            <div class="ekskul-meta-item">
-              <div class="ekskul-meta-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-              </div>
-              <div class="ekskul-meta-text">
-                <span class="ekskul-meta-label">Pembina</span>
-                <span class="ekskul-meta-value"><?= $e['pembina'] ?></span>
-              </div>
-            </div>
-
-            <div class="ekskul-meta-item">
-              <div class="ekskul-meta-icon">
-                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-              </div>
-              <div class="ekskul-meta-text">
-                <span class="ekskul-meta-label">Peserta</span>
-                <span class="ekskul-meta-value"><?= $e['peserta'] ?></span>
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -641,7 +596,7 @@
   <h3>Tertarik Bergabung?</h3>
   <p>Daftarkan putra-putri Anda ke ekstrakurikuler pilihan. Hubungi kami untuk informasi lebih lanjut.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/6285210457475" target="_blank" rel="noopener" class="btn btn--primary">
+    <a href="https://wa.me/6289639295611" target="_blank" rel="noopener" class="btn btn--primary">
       💬 Chat WhatsApp
     </a>
     <a href="index.php#kontak" class="btn btn--outline">

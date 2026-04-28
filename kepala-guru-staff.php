@@ -33,10 +33,10 @@
     ["name"=>"SITI NURAENI, S.Th.I",            "role"=>"Guru Kelas 5B",  "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-10.jpeg"],
     ["name"=>"EKA SURYATI, S.Pd",               "role"=>"Guru Kelas 6A",  "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-11.jpeg"],
     ["name"=>"SITI HOMSYAH, S.Pd",              "role"=>"Guru Kelas 6B",  "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-12.jpeg"],
-    ["name"=>"DEWI WULAN PURNAMA SARI",         "role"=>"Guru Mapel",     "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-13.jpeg"],
     ["name"=>"IKHFA ANAKING, S.Pd",             "role"=>"Guru Mapel",     "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-14.jpeg"],
-    ["name"=>"SITI ARTANTI MULYASARI, S.Pd",    "role"=>"Guru Mapel",     "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-15.jpeg"],
     ["name"=>"THAZRA NUR ARIFAH",               "role"=>"Guru Mapel",     "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-16.jpeg"],
+    ["name"=>"DEWI WULAN PURNAMA SARI",         "role"=>"Guru Mapel",     "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-13.jpeg"],
+    ["name"=>"SITI ARTANTI MULYASARI, S.Pd",    "role"=>"Guru Mapel",     "subject"=>"—","jabatan"=>"Guru","photo"=>"img/guru/guru-15.jpeg"],
 
     /* ========= STAFF (4) ========= */
     ["name"=>"Vania Wijaya, S.Pd",   "role"=>"Operator Sekolah",    "subject"=>"—","jabatan"=>"Staff","photo"=>"img/guru/staff-01.jpeg"],
