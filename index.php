@@ -137,49 +137,49 @@
     <h2 class="section-title">Informasi Sekolah</h2>
     <p class="section-sub">Angka-angka yang mencerminkan komitmen kami</p>
 
-    <div class="stats-grid">
+    <div class="info-cards-wrap">
 
-      <!-- Ekstrakurikuler -->
-<a href="ekskul.php" class="stat-card stat-card--link">
-  <div class="stat-icon">
-    <svg viewBox="0 0 24 24"><path d="M12 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm7 7h-4.5l-1.5-2.5L11 10H4v2h2.5l1.5 5H6v2h12v-2h-2l1.5-5H20v-2z"/></svg>
-  </div>
-  <div class="stat-label">Ekskul</div>
-  <div class="stat-number" data-target="3">0</div>
-  <div class="stat-sub">Bidang &amp; Minat</div>
-  <span class="stat-link-btn">Lihat →</span>
-</a>
+      <!-- Cloud dekorasi belakang -->
+      <svg class="info-cloud info-cloud--left" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M160 90H50c-22 0-40-18-40-40s18-40 40-40c2 0 4 0 6 1C62 4 76 0 90 0c28 0 50 20 52 46 14 4 24 17 24 32 0 18-14 32-32 32z" fill="rgba(255,255,255,0.08)"/>
+      </svg>
+      <svg class="info-cloud info-cloud--right" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M160 90H50c-22 0-40-18-40-40s18-40 40-40c2 0 4 0 6 1C62 4 76 0 90 0c28 0 50 20 52 46 14 4 24 17 24 32 0 18-14 32-32 32z" fill="rgba(255,255,255,0.08)"/>
+      </svg>
 
-      <!-- Tenaga Pengajar -->
-      <a href="kepala-guru-staff.php" class="stat-card stat-card--link">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      <!-- Ekskul -->
+      <a href="ekskul.php" class="info-card">
+        <div class="info-card-top">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm7 7h-4.5l-1.5-2.5L11 10H4v2h2.5l1.5 5H6v2h12v-2h-2l1.5-5H20v-2z"/></svg>
+          </div>
+          <div class="info-card-meta">
+            <span class="info-card-label">Ekstrakurikuler</span>
+            <span class="info-card-number" data-target="3">0</span>
+            <span class="info-card-sub">Bidang &amp; Minat</span>
+          </div>
         </div>
-        <div class="stat-label">Pengajar</div>
-        <div class="stat-number" data-target="22">0</div>
-        <div class="stat-sub">Berdedikasi</div>
-        <span class="stat-link-btn">Lihat →</span>
+        <div class="info-card-footer">
+          Lihat Ekskul →
+        </div>
       </a>
 
-      <!-- Fasilitas -->
-      <div class="stat-card">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
+      <!-- Pengajar -->
+      <a href="kepala-guru-staff.php" class="info-card">
+        <div class="info-card-top">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <div class="info-card-meta">
+            <span class="info-card-label">Tenaga Pengajar</span>
+            <span class="info-card-number" data-target="22">0</span>
+            <span class="info-card-sub">Berdedikasi</span>
+          </div>
         </div>
-        <div class="stat-label">Fasilitas</div>
-        <div class="stat-number" data-target="15">0</div>
-        <div class="stat-sub">Ruang Belajar</div>
-      </div>
-
-      <!-- Siswa -->
-      <div class="stat-card">
-        <div class="stat-icon">
-          <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        <div class="info-card-footer">
+          Lihat Pengajar →
         </div>
-        <div class="stat-label">Siswa</div>
-        <div class="stat-number" data-suffix="+" data-target="280">0</div>
-        <div class="stat-sub">Aktif Belajar</div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -486,7 +486,7 @@ window.addEventListener('scroll', () => {
 
 /* ---------- Counter Animasi ---------- */
 function animateCounters() {
-  document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  document.querySelectorAll('[data-target]').forEach(el => {
     const target   = +el.dataset.target;
     const suffix   = el.dataset.suffix || '';
     const duration = 1200;
@@ -494,10 +494,7 @@ function animateCounters() {
     let current    = 0;
     const timer = setInterval(() => {
       current += step;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-      }
+      if (current >= target) { current = target; clearInterval(timer); }
       el.textContent = Math.floor(current) + suffix;
     }, 16);
   });
