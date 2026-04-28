@@ -804,11 +804,7 @@
   <div class="profil-section struktur-section">
     <div class="profil-section-inner">
       <h2 class="profil-section-title">Struktur Organisasi</h2>
-      <p class="profil-section-sub">Susunan kepengurusan <?= $school_name ?> Tahun <?= $year ?></p>
-
-      <div class="struktur-note">
-        ⚠️ <strong>Template</strong> — Beberapa posisi masih perlu diisi sesuai data aktual madrasah.
-      </div>
+      <p class="profil-section-sub">Susunan kepengurusan <?= $school_name ?> Tahun <?= $year ?></p>w
 
       <div class="org-chart">
 
