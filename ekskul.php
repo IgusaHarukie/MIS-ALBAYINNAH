@@ -1,5 +1,5 @@
 <?php
-  $school_name = "MIS AL BAYINNAH";
+  $school_name = "MIS AL BAYYINAH";
   $year        = date("Y");
 
   $ekskul = [
@@ -25,7 +25,7 @@
       "nama"    => "Bulu Tangkis",
       "icon"    => "🏸",
       "foto"    => "img/ekskul/ekskul-badminton.jpeg",
-      "desc"    => "Mengembangkan bakat seni siswa melalui keindahan tulisan Arab. Siswa diajarkan berbagai gaya khat mulai dari Naskhi hingga Tsuluts oleh pembina berpengalaman, dengan target mengikuti perlombaan tingkat kecamatan dan kabupaten.",
+      "desc"    => "Mengembangkan kemampuan fisik dan sportivitas siswa melalui olahraga bulu tangkis. Siswa dilatih teknik dasar hingga lanjutan oleh pembina berpengalaman, dengan target mengikuti turnamen antar madrasah tingkat kecamatan dan kabupaten.",
       "hari"    => "Jum'at",
       "jam"     => "13.00 – 14.30 WIB",
       "warna"   => "#2D8F81",

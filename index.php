@@ -1,5 +1,5 @@
 <?php
-  $school_name  = "MIS AL BAYINNAH";
+  $school_name  = "MIS AL BAYYINAH";
   $year         = date("Y");
   $address      = "Kp. Manggis, RT.02/RW.04";
   $city         = "Dramaga, Kabupaten Bogor, Jawa Barat 16680";
@@ -9,7 +9,7 @@
   $youtube      = "@Misalbayyinahdramaga";
 
   $kepala_sekolah = "H. SOLAHUDIN, S.Ag";
-  $sambutan = "Bismillahirrahmanirrahim. Selamat datang di MIS Al-Bayinnah Dramaga. Kami berkomitmen mendidik generasi Qur'ani yang unggul dalam ilmu pengetahuan, berakhlak mulia, dan teguh dalam iman. Bersama orang tua dan masyarakat, kami terus berupaya mewujudkan madrasah yang berkualitas dan berkarakter Islami.";
+  $sambutan = "Bismillahirrahmanirrahim. Selamat datang di MIS Al-Bayyinah Dramaga. Kami berkomitmen mendidik generasi Qur'ani yang unggul dalam ilmu pengetahuan, berakhlak mulia, dan teguh dalam iman. Bersama orang tua dan masyarakat, kami terus berupaya mewujudkan madrasah yang berkualitas dan berkarakter Islami.";
 
   $berita = [
     [
@@ -76,7 +76,7 @@
     <span class="hero-badge">🕌 Madrasah Ibtidaiyah Sanawiyah</span>
     <h1 class="hero-title">
       Selamat Datang di<br />
-      <span class="hero-title--accent">MIS Al-Bayinnah</span>
+      <span class="hero-title--accent">MIS Al-Bayyinah</span>
     </h1>
     <p class="hero-sub">
       Mendidik generasi Qur'ani yang unggul dalam ilmu, teguh dalam iman, dan mulia dalam akhlak.
@@ -196,12 +196,12 @@
         <h2 class="section-title section-title--dark">Fasilitas Unggulan</h2>
         <p class="section-sub section-sub--dark">Lingkungan belajar yang nyaman dan lengkap</p>
       </div>
-      <a href="#fasilitas" class="btn btn--ghost">Lihat Semua →</a>
+      <a href="galeri.php" class="btn btn--ghost">Lihat Semua →</a>
     </div>
 
     <div class="fasilitas-grid">
 
-      <div class="fasilitas-item" onclick="openLightbox('img/fasilitas-masjid.jpeg', '🕌 Masjid Al-Bayinnah')">
+      <div class="fasilitas-item" onclick="openLightbox('img/fasilitas-masjid.jpeg', '🕌 Masjid Al-Bayyinah')">
         <div class="fasilitas-bg" style="background-image: url('img/fasilitas-masjid.jpeg');"></div>
         <div class="fasilitas-info">
           <span class="fasilitas-label">🕌 Masjid</span>
@@ -349,7 +349,7 @@
           </iframe>
         </div>
 
-<form class="kontak-form" onsubmit="handleForm(event)">
+<form class="kontak-form" id="kontakForm">
   <h4>✉️ Kirim Pesan</h4>
   <input  type="text"  name="nama"  placeholder="Nama Anda"  required />
   <input type="email" name="email" placeholder="Email" required />
@@ -523,27 +523,39 @@ function closeLightbox() {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
 /* ---------- Form ---------- */
-function handleForm(e) {
+document.getElementById('kontakForm').addEventListener('submit', async function(e) {
   e.preventDefault();
+
+  const btn    = this.querySelector('button[type="submit"]');
   const status = document.getElementById('form-status');
-  status.textContent = '✅ Pesan berhasil dikirim! Kami akan segera menghubungi Anda.';
-  status.style.color = '#76FF7A';
-  e.target.reset();
-  setTimeout(() => { status.textContent = ''; }, 5000);
-}
 
-/* ---------- Reveal Animasi Scroll ---------- */
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('revealed');
-      revealObserver.unobserve(e.target);
+  btn.disabled    = true;
+  btn.textContent = '⏳ Mengirim...';
+  status.textContent = '';
+
+  try {
+    const res = await fetch('https://formspree.io/f/mkoyrvza', {
+      method:  'POST',
+      body:    new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      status.textContent = '✅ Pesan berhasil dikirim!';
+      status.style.color = '#76FF7A';
+      this.reset();
+    } else {
+      status.textContent = '❌ Gagal mengirim, coba lagi.';
+      status.style.color = '#ff6b6b';
     }
-  });
-}, { threshold: 0.1 });
+  } catch {
+    status.textContent = '❌ Tidak bisa terhubung.';
+    status.style.color = '#ff6b6b';
+  }
 
-document.querySelectorAll('.berita-card, .fasilitas-item, .stat-card, .sambutan-grid, .kontak-item')
-  .forEach(el => revealObserver.observe(el));
+  btn.disabled    = false;
+  btn.textContent = 'Kirim Pesan 📨';
+});
 </script>
 
 </body>

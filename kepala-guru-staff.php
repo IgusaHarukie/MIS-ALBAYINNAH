@@ -1,5 +1,5 @@
 <?php
-  $school_name = "MIS AL BAYINNAH";
+  $school_name = "MIS AL BAYYINAH";
   $year        = date("Y");
 
   // Badge: Jabatan → warna

@@ -1,5 +1,5 @@
 <?php
-  $school_name = "MIS AL BAYINNAH";
+  $school_name = "MIS AL BAYYINAH";
   $year        = date("Y");
 
   $visi = "Terwujudnya warga madrasah yang Qur'ani, unggul dalam ilmu pengetahuan, teguh dalam iman dan taqwa";
@@ -17,7 +17,7 @@
   ];
 
   $identitas = [
-    ["label" => "Nama Madrasah",         "value" => "MIS Al-Bayinnah Dramaga"],
+    ["label" => "Nama Madrasah",         "value" => "MIS Al-Bayyinah Dramaga"],
     ["label" => "NSM",                   "value" => "111232010057"],
     ["label" => "NPSN",                  "value" => "60726446"],
     ["label" => "Status Madrasah",       "value" => "Swasta"],
@@ -31,7 +31,7 @@
     ["label" => "Kode Pos",              "value" => "16680"],
     ["label" => "No. Telepon",           "value" => "+62 852-1045-7475"],
     ["label" => "Email",                 "value" => "2027albyynh@gmail.com"],
-    ["label" => "Yayasan Penyelenggara", "value" => "Yayasan Al-Bayinnah"],
+    ["label" => "Yayasan Penyelenggara", "value" => "Yayasan Al-Bayyinah"],
   ];
 
   $program = [
@@ -68,15 +68,21 @@
   ];
 
   $struktur = [
-    ["jabatan" => "Kepala Madrasah",         "nama" => "H. Solahudin, S.Ag",          "level" => 1],
-    ["jabatan" => "Komite Madrasah",         "nama" => "— (Template)",                "level" => 2],
-    ["jabatan" => "Wakil Kepala Madrasah",   "nama" => "— (Template)",                "level" => 2],
-    ["jabatan" => "Bendahara",               "nama" => "— (Template)",                "level" => 3],
-    ["jabatan" => "Tata Usaha",              "nama" => "Ria Astrianti, S.Pd",         "level" => 3],
-    ["jabatan" => "Operator Sekolah",        "nama" => "Vania Wijaya, S.Pd",          "level" => 3],
-    ["jabatan" => "Koordinator Guru",        "nama" => "— (Template)",                "level" => 3],
-    ["jabatan" => "Guru Kelas & Mapel",      "nama" => "16 Tenaga Pengajar",          "level" => 4],
-    ["jabatan" => "Staff Kebersihan & Keamanan", "nama" => "Toha & Tresna Pramana",   "level" => 4],
+    ["jabatan" => "Ketua Yayasan",        "nama" => "Drs. Nahrowi, M.A",                                      "level" => 1],
+    ["jabatan" => "Pengawas",             "nama" => "Hj. Yeni Sri Haryani, S.Ag, M.M.Pd",                    "level" => 2],
+    ["jabatan" => "Kepala Sekolah",       "nama" => "H. Solahudin, S.Ag",                                     "level" => 2],
+    ["jabatan" => "Dewan / Komite",       "nama" => "Sinta Purnama",                                           "level" => 2],
+    ["jabatan" => "Unit Perpustakaan",    "nama" => "Vania Wijaya, S.Pd",                                      "level" => 3],
+    ["jabatan" => "Tata Usaha",           "nama" => "Ria Astrianti, S.Pd",                                     "level" => 3],
+    ["jabatan" => "Guru Kelas I",         "nama" => "1A Siti Maemunah, S.Pd.I | 1B Lastri Sulastri, S.Pd",   "level" => 4],
+    ["jabatan" => "Guru Kelas II",        "nama" => "2A Ikka Nurilah.J, S.Pd. | 2B Robi'atul. A, S.Pd",      "level" => 4],
+    ["jabatan" => "Guru Kelas III",       "nama" => "3A Dayat Septian, S.Pd | 3B Siti Maesaroh, S.Pd",       "level" => 4],
+    ["jabatan" => "Guru Kelas IV",        "nama" => "4A Mulyadi, S.Pd | 4B Nisa Khusniati, S.Pd.",            "level" => 4],
+    ["jabatan" => "Guru Kelas V",         "nama" => "5A Hoerunnisa, S.Pd | 5B Siti Nuraeni, S.Th.I",         "level" => 5],
+    ["jabatan" => "Guru Kelas VI",        "nama" => "6A Eka Suryati, S. Pd | 6B Siti Homsyah, S.Pd",         "level" => 5],
+    ["jabatan" => "Guru Agama",           "nama" => "Budi Hartadi, S.Pd.I",                                    "level" => 6],
+    ["jabatan" => "Siswa",                "nama" => "",                                                          "level" => 6],
+    ["jabatan" => "Guru Mulok",           "nama" => "Ikhfa Anaking, S.Pd | Siti Artanti.M, S.Pd | Thazra Nur Arifah | Dewi Wulan.P.S", "level" => 6],
   ];
 ?>
 <!DOCTYPE html>
@@ -503,7 +509,17 @@
       font-size: 0.875rem;
       border-bottom: 1px solid var(--green-wash);
     }
-    .identitas-label {
+    .org-node--siswa {
+      background: #e8730a;
+      border-color: #e8730a;
+      min-width: 140px;
+    }
+    .org-node--siswa .org-jabatan {
+      color: var(--white);
+      font-size: 0.9rem;
+      letter-spacing: .04em;
+    }
+
       background: var(--green-bg);
       color: var(--text-soft);
       font-weight: 700;
@@ -662,89 +678,74 @@
         <div class="sejarah-text">
           <h3>Latar Belakang Pendirian</h3>
           <p>
-            MIS Al-Bayinnah Dramaga didirikan atas kesadaran dan kepedulian masyarakat Kampung Manggis
-            terhadap pentingnya pendidikan Islam yang berkualitas bagi generasi penerus. Berawal dari
-            pengajian dan kegiatan belajar mengajar sederhana di lingkungan masjid, madrasah ini
-            tumbuh menjadi lembaga pendidikan formal yang diakui.
+            MIS Al-Bayyinah Dramaga lahir dari kepedulian dan kebersamaan masyarakat
+            Kampung Manggis yang mendambakan lembaga pendidikan Islam berkualitas bagi
+            putra-putri mereka. Didorong oleh keyakinan bahwa pendidikan agama dan
+            pendidikan umum harus berjalan beriringan, para tokoh masyarakat dan ulama
+            setempat bersepakat untuk mendirikan madrasah yang berakar pada nilai-nilai
+            Al-Qur'an dan Sunnah.
           </p>
           <p>
-            Dengan semangat kebersamaan dan dukungan penuh dari warga sekitar, para pendiri madrasah
-            bersepakat untuk mendirikan Madrasah Ibtidaiyah Swasta yang berazaskan nilai-nilai
-            Al-Qur'an dan Sunnah, dengan tetap mengikuti kurikulum nasional yang berlaku.
+            Dengan modal utama semangat gotong royong dan keikhlasan, madrasah ini
+            tumbuh dari lingkungan yang sederhana menjadi lembaga pendidikan formal
+            yang dipercaya oleh masyarakat Dramaga dan sekitarnya.
           </p>
 
-          <h3>Perkembangan Madrasah</h3>
+          <h3>Tumbuh Bersama Masyarakat</h3>
           <p>
-            Sejak berdiri, MIS Al-Bayinnah terus mengalami perkembangan yang signifikan baik dari
-            segi fisik bangunan, kualitas tenaga pengajar, maupun jumlah peserta didik. Program
-            Tahfidz Al-Qur'an menjadi ciri khas dan keunggulan utama yang membedakan madrasah ini
-            dari sekolah dasar lainnya di wilayah Dramaga.
+            Sejak awal berdiri, MIS Al-Bayyinah tidak pernah berdiri sendiri —
+            madrasah ini tumbuh bersama warganya. Dukungan orang tua, tokoh agama,
+            dan pemerintah setempat menjadi fondasi yang menopang setiap langkah
+            perkembangan madrasah, dari perbaikan sarana hingga peningkatan mutu
+            tenaga pengajar.
           </p>
           <p>
-            Kini dengan lebih dari 320 siswa aktif dan 22 tenaga pendidik yang berdedikasi,
-            MIS Al-Bayinnah terus berkomitmen mewujudkan generasi yang Qur'ani, unggul dalam
-            ilmu pengetahuan, serta teguh dalam iman dan taqwa.
+            Program Tahfidz Al-Qur'an yang kini menjadi keunggulan utama madrasah
+            pun lahir dari kebutuhan nyata masyarakat — keinginan agar anak-anak
+            mereka tidak hanya cerdas secara akademik, tetapi juga kuat dalam hafalan
+            dan pemahaman Al-Qur'an.
           </p>
 
           <h3>Komitmen ke Depan</h3>
           <p>
-            MIS Al-Bayinnah berkomitmen untuk terus meningkatkan mutu pendidikan, memperluas
-            fasilitas belajar, dan memperkuat program-program unggulan demi menjawab tantangan
-            zaman tanpa meninggalkan nilai-nilai Islam yang menjadi fondasi utama madrasah.
+            MIS Al-Bayyinah terus berbenah — memperkuat kualitas pengajaran,
+            melengkapi fasilitas belajar, dan mengembangkan program-program unggulan
+            yang relevan dengan tantangan zaman. Namun satu hal yang tidak akan
+            berubah: komitmen untuk mencetak generasi yang Qur'ani, berilmu, dan
+            berakhlak mulia.
           </p>
         </div>
 
         <!-- Timeline -->
         <div>
-          <h3 style="font-family:'Amiri',serif;font-size:1.1rem;color:var(--text-dark);margin-bottom:20px;">Tonggak Sejarah</h3>
+          <h3 style="font-family:'Amiri',serif;font-size:1.1rem;color:var(--text-dark);margin-bottom:20px;">Pilar Madrasah</h3>
           <div class="sejarah-timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot">📌</div>
-              <div class="timeline-body">
-                <div class="timeline-year">1990</div>
-                <div class="timeline-desc">Pendirian MIS Al-Bayinnah oleh masyarakat Kampung Manggis, Dramaga.</div>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot">📜</div>
-              <div class="timeline-body">
-                <div class="timeline-year">1995</div>
-                <div class="timeline-desc">Mendapat izin operasional resmi dari Kementerian Agama Kabupaten Bogor.</div>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot">🏫</div>
-              <div class="timeline-body">
-                <div class="timeline-year">2002</div>
-                <div class="timeline-desc">Pembangunan gedung baru dua lantai untuk mendukung kegiatan belajar mengajar.</div>
-              </div>
-            </div>
             <div class="timeline-item">
               <div class="timeline-dot">📖</div>
               <div class="timeline-body">
-                <div class="timeline-year">2010</div>
-                <div class="timeline-desc">Peluncuran program unggulan Tahfidz Al-Qur'an yang diintegrasikan ke kurikulum.</div>
+                <div class="timeline-year">Qur'ani</div>
+                <div class="timeline-desc">Menjadikan Al-Qur'an sebagai landasan utama dalam setiap aspek pendidikan dan kehidupan warga madrasah.</div>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-dot">🏆</div>
+              <div class="timeline-dot">🎓</div>
               <div class="timeline-body">
-                <div class="timeline-year">2015</div>
-                <div class="timeline-desc">Meraih akreditasi B dari Badan Akreditasi Nasional Madrasah.</div>
+                <div class="timeline-year">Berilmu</div>
+                <div class="timeline-desc">Mengintegrasikan ilmu pengetahuan umum dan agama secara seimbang agar siswa siap menghadapi tantangan zaman.</div>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-dot">💻</div>
+              <div class="timeline-dot">🌿</div>
               <div class="timeline-body">
-                <div class="timeline-year">2020</div>
-                <div class="timeline-desc">Pengembangan laboratorium komputer dan program literasi digital bagi siswa.</div>
+                <div class="timeline-year">Berakhlak</div>
+                <div class="timeline-desc">Membentuk karakter mulia melalui pembiasaan adab Islami dalam keseharian, baik di dalam maupun di luar kelas.</div>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-dot">🌟</div>
+              <div class="timeline-dot">🤝</div>
               <div class="timeline-body">
-                <div class="timeline-year">Kini</div>
-                <div class="timeline-desc">Terus berkembang dengan 320+ siswa aktif dan 22 tenaga pendidik berdedikasi.</div>
+                <div class="timeline-year">Bersama</div>
+                <div class="timeline-desc">Membangun madrasah secara kolektif bersama orang tua, masyarakat, dan seluruh warga madrasah sebagai satu keluarga besar.</div>
               </div>
             </div>
           </div>
@@ -804,65 +805,100 @@
   <div class="profil-section struktur-section">
     <div class="profil-section-inner">
       <h2 class="profil-section-title">Struktur Organisasi</h2>
-      <p class="profil-section-sub">Susunan kepengurusan <?= $school_name ?> Tahun <?= $year ?></p>w
+      <p class="profil-section-sub">Susunan kepengurusan <?= $school_name ?> Tahun <?= $year ?></p>
 
       <div class="org-chart">
 
-        <!-- Level 1: Kepala -->
+        <!-- Level 1: Ketua Yayasan -->
         <div class="org-level">
           <div class="org-node org-node--head">
-            <div class="org-jabatan">Kepala Madrasah</div>
+            <div class="org-jabatan">Ketua Yayasan</div>
+            <div class="org-nama">Drs. Nahrowi, M.A</div>
+          </div>
+        </div>
+
+        <div class="org-connector"></div>
+
+        <!-- Level 2: Pengawas | Kepala Sekolah | Dewan/Komite -->
+        <div class="org-level">
+          <div class="org-node">
+            <div class="org-jabatan">Pengawas</div>
+            <div class="org-nama">Hj. Yeni Sri Haryani, S.Ag, M.M.Pd</div>
+          </div>
+          <div class="org-node org-node--head">
+            <div class="org-jabatan">Kepala Sekolah</div>
             <div class="org-nama">H. Solahudin, S.Ag</div>
           </div>
-        </div>
-
-        <div class="org-connector"></div>
-
-        <!-- Level 2: Komite + Wakil -->
-        <div class="org-level">
           <div class="org-node">
-            <div class="org-jabatan">Komite Madrasah</div>
-            <div class="org-nama">— (Template)</div>
-          </div>
-          <div class="org-node">
-            <div class="org-jabatan">Wakil Kepala Madrasah</div>
-            <div class="org-nama">— (Template)</div>
+            <div class="org-jabatan">Dewan / Komite</div>
+            <div class="org-nama">Sinta Purnama</div>
           </div>
         </div>
 
         <div class="org-connector"></div>
 
-        <!-- Level 3: Bendahara, TU, Operator, Koordinator -->
+        <!-- Level 3: Unit Perpustakaan | Tata Usaha -->
         <div class="org-level">
           <div class="org-node">
-            <div class="org-jabatan">Bendahara</div>
-            <div class="org-nama">— (Template)</div>
+            <div class="org-jabatan">Unit Perpustakaan</div>
+            <div class="org-nama">Vania Wijaya, S.Pd</div>
           </div>
           <div class="org-node">
             <div class="org-jabatan">Tata Usaha</div>
             <div class="org-nama">Ria Astrianti, S.Pd</div>
           </div>
+        </div>
+
+        <div class="org-connector"></div>
+
+        <!-- Level 4: Guru Kelas I – IV -->
+        <div class="org-level">
           <div class="org-node">
-            <div class="org-jabatan">Operator Sekolah</div>
-            <div class="org-nama">Vania Wijaya, S.Pd</div>
+            <div class="org-jabatan">Guru Kelas I</div>
+            <div class="org-nama">1A Siti Maemunah, S.Pd.I<br>1B Lastri Sulastri, S.Pd</div>
           </div>
           <div class="org-node">
-            <div class="org-jabatan">Koordinator Guru</div>
-            <div class="org-nama">— (Template)</div>
+            <div class="org-jabatan">Guru Kelas II</div>
+            <div class="org-nama">2A Ikka Nurilah.J, S.Pd.<br>2B Robi'atul. A, S.Pd</div>
+          </div>
+          <div class="org-node">
+            <div class="org-jabatan">Guru Kelas III</div>
+            <div class="org-nama">3A Dayat Septian, S.Pd<br>3B Siti Maesaroh, S.Pd</div>
+          </div>
+          <div class="org-node">
+            <div class="org-jabatan">Guru Kelas IV</div>
+            <div class="org-nama">4A Mulyadi, S.Pd<br>4B Nisa Khusniati, S.Pd.</div>
           </div>
         </div>
 
         <div class="org-connector"></div>
 
-        <!-- Level 4: Guru + Staff -->
+        <!-- Level 5: Guru Kelas V – VI -->
         <div class="org-level">
           <div class="org-node">
-            <div class="org-jabatan">Guru Kelas &amp; Mapel</div>
-            <div class="org-nama">16 Tenaga Pengajar</div>
+            <div class="org-jabatan">Guru Kelas V</div>
+            <div class="org-nama">5A Hoerunnisa, S.Pd<br>5B Siti Nuraeni, S.Th.I</div>
           </div>
           <div class="org-node">
-            <div class="org-jabatan">Staff Kebersihan &amp; Keamanan</div>
-            <div class="org-nama">Toha &amp; Tresna Pramana</div>
+            <div class="org-jabatan">Guru Kelas VI</div>
+            <div class="org-nama">6A Eka Suryati, S. Pd<br>6B Siti Homsyah, S.Pd</div>
+          </div>
+        </div>
+
+        <div class="org-connector"></div>
+
+        <!-- Level 6: Guru Agama | Siswa | Guru Mulok -->
+        <div class="org-level">
+          <div class="org-node">
+            <div class="org-jabatan">Guru Agama</div>
+            <div class="org-nama">Budi Hartadi, S.Pd.I</div>
+          </div>
+          <div class="org-node org-node--siswa">
+            <div class="org-jabatan">Siswa</div>
+          </div>
+          <div class="org-node">
+            <div class="org-jabatan">Guru Mulok</div>
+            <div class="org-nama">Ikhfa Anaking, S.Pd<br>Siti Artanti.M, S.Pd<br>Thazra Nur Arifah<br>Dewi Wulan.P.S</div>
           </div>
         </div>
 

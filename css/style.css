@@ -1,5 +1,5 @@
 /* ===================================================
-   MIS AL BAYINNAH — Stylesheet (Rework)
+   MIS AL BAYYINAH — Stylesheet (Rework)
    =================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&display=swap');
@@ -284,15 +284,14 @@ ul    { list-style: none; }
 .stat-card,
 .sambutan-grid,
 .kontak-item {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  animation: fadeInUp 0.6s ease both;
 }
 
-.revealed {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
+.berita-card:nth-child(2) { animation-delay: 0.1s; }
+.berita-card:nth-child(3) { animation-delay: 0.2s; }
+.stat-card:nth-child(2)   { animation-delay: 0.1s; }
+.stat-card:nth-child(3)   { animation-delay: 0.2s; }
+.stat-card:nth-child(4)   { animation-delay: 0.3s; }
 
 
 /* ===================================================
@@ -1285,6 +1284,9 @@ a.stat-card { text-decoration: none; }
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
+  .fasilitas-item {
+    min-height: 220px;
+  }
   .fasilitas-item--tall {
     grid-column: auto;
     grid-row: auto;
@@ -1329,6 +1331,7 @@ a.stat-card { text-decoration: none; }
   .hero-content { padding: 80px 20px 60px; }
 
   .fasilitas-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .fasilitas-item { min-height: 220px; }
   .fasilitas-item--tall { grid-column: auto; grid-row: auto; height: 220px; }
 
   .berita-grid { grid-template-columns: 1fr; }
